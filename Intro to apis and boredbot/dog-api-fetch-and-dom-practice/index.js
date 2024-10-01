@@ -20,7 +20,7 @@ async function getData() {
   
       const json = await response.json();
       // console.log(json.message);
-      document.getElementById("img").innerHTML += `<img src=${json.message}>`
+      document.getElementById("img").innerHTML = `<img src=${json.message}>`
     } catch (error) {
       console.error(error.message);
     }
@@ -28,4 +28,11 @@ async function getData() {
   
   getData()
   
-  
+//   fetch("https://dog.ceo/api/breeds/image/random")
+//   .then(response => response.json())
+//   .then(data => {
+//       console.log(data)
+//       document.getElementById("img").innerHTML = `
+//           <img src="${data.message}" />
+//       `
+//   })  
