@@ -19,11 +19,28 @@ nav {
     background: #6a3093;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #6a3093, #a044ff);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #6a3093, #a044ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    font-family: "Pacifico", cursive;
+}
 
+.logo{
+    height: 45px;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 main{
     padding-top: 120px;
+}
+
+.post{
+    border-bottom: 2px solid #6a3093;
+}
+
+.post:last-child{
+    border-bottom: none;
 }
 
 h2{
@@ -44,6 +61,7 @@ input, textarea {
     border: 2px solid #6a3093;
     border-radius: 3px;  
     padding: 10px; 
+    background:none ;
 }
 
 button{
@@ -64,4 +82,13 @@ label{
     margin-top: 10px;
     margin-bottom: 10px;
     color: #6a3093;
+}
+
+footer{
+    padding: 8px 0;
+    text-align: center;
+    color: white;
+    background: #6a3093;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6a3093, #a044ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6a3093, #a044ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

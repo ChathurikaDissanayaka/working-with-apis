@@ -13,7 +13,6 @@ function renderPosts(){
         <div class='post'>
           <h2>${item.title}</h2>
           <p>${item.body}</p>
-          <hr>
         </div>`
       })
 
@@ -23,7 +22,7 @@ function renderPosts(){
 fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     .then(res => res.json())
     .then(data => {
-        postsArray = data.slice(0, 5)
+        postsArray = data.slice(0, 10)
         renderPosts()
     })
 
