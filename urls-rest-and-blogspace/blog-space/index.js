@@ -2,11 +2,25 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     .then(res => res.json())
     .then(data => {
         const postsArr = data.slice(0, 5)
-        console.log(postsArr)
         const postsEl = document.getElementById('posts')
         postsArr.forEach((item) => {
           postsEl.innerHTML += `
-          <h1>${item.title}</h1>
-          <p>${item.body}</p>`
+          <div class='post'>
+            <h2>${item.title}</h2>
+            <p>${item.body}</p>
+            <hr>
+          </div>`
+        })
+        document.getElementById('newPost').addEventListener('submit', function(e){
+            e.preventDefault();
+            const title = document.getElementById('title').value
+            const body = document.getElementById('body').value
+
+            const post = {
+                title: title,
+                body: body
+            }
+
+            console.log(post)
         })
     })
