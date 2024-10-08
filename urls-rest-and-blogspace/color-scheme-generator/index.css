@@ -20,7 +20,6 @@ body{
 .container{
     height: 550px;
     width: 550px;
-    /* border: 1px solid #111827; */
     background-color: #FFFFFF;
 }
 
@@ -29,9 +28,10 @@ h1{
     color: #111827;
 }
 
-.form{
+form{
     height: 90px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 27px 19px;
@@ -40,8 +40,7 @@ h1{
 .seed-color{
     width: 61px;
     height: 42px;
-    border: 5px solid #D1D5DB;
-    background-color: #F55A5A;
+    border: 1px solid #D1D5DB;
 }
 
 select{
@@ -60,7 +59,7 @@ button{
     border: 2px solid #D1D5DB;
     color: #374151;
     background-color: #FFFFFF;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 button:hover{
@@ -77,23 +76,23 @@ button:hover{
 }
 
 .color-1{
-    background-color: #F55A5A;
+    background-color: #000000;
 }
 
 .color-2{
-    background-color: #2B283A;
+    background-color: #1A1919;
 }
 
 .color-3{
-    background-color: #FBF3AB;
+    background-color: #343232;
 }
 
 .color-4{
-    background-color: #AAD1B6;
+    background-color: #4F4A4A;
 }
 
 .color-5{
-    background-color: #A626D3;
+    background-color: #6A6262;
 }
 
 .color-code{

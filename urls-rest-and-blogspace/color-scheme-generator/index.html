@@ -16,50 +16,49 @@
 
 <body>
     <h1>Color Scheme Generator</h1>
+
+    <main class="container">
+        <section class="form">
+            <form id="new-scheme" action="">
+                <input type="color" class="seed-color" name="seed-color" id="seed-color">
+                <select name="mode" id="mode">
+                    <option value="monochrome" selected>Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                </select>
+                <button type="submit">Get color scheme</button>
+            </form>
+        </section>
+
+        <section id="colors" class="colors">
+            <div id="color-1" class="color-1">
+                <div class="color"></div>
+                <div class="color-code">#000000</div>
+            </div>
+            <div id="color-2" class="color-2">
+                <div class="color"></div>
+                <div class="color-code">#1A1919</div>
+            </div>
+            <div id="color-3" class="color-3">
+                <div class="color"></div>
+                <div class="color-code">#343232</div>
+            </div>
+            <div id="color-4" class="color-4">
+                <div class="color"></div>
+                <div class="color-code">#4F4A4A</div>
+            </div>
+            <div id="color-5" class="color-5">
+                <div class="color"></div>
+                <div class="color-code">#6A6262</div>
+            </div>
+        </section>
+    </main>
+    <div id="ex"></div>
     <script src="index.js"></script>
 </body>
-<main class="container">
-    <section class="form">
-        <div class="seed-color"></div>
-        <div>
-            <select name="seed-colors" id="seed-colors">
-                <option value="monochrome" selected>Monochrome</option>
-                <option value="monochrome-dark">Monochrome-dark</option>
-                <option value="monochrome-light">Monochrome-light</option>
-                <option value="analogic">Analogic</option>
-                <option value="complement">Complement</option>
-                <option value="analogic-complement">Analogic-complement</option>
-                <option value="triad">Triad</option>
-            </select>
-        </div>
-        <form action="">
-            <button type="submit">Get color scheme</button>
-        </form>
-    </section>
-
-    <section class="colors">
-        <div class="color-1">
-            <div class="color"></div>
-            <div class="color-code">#F55A5A</div>
-        </div>
-        <div class="color-2">
-            <div class="color"></div>
-            <div class="color-code">#2B283A</div>
-        </div>
-        <div class="color-3">
-            <div class="color"></div>
-            <div class="color-code">#FBF3AB</div>
-        </div>
-        <div class="color-4">
-            <div class="color"></div>
-            <div class="color-code">#AAD1B6</div>
-        </div>
-        <div class="color-5">
-            <div class="color"></div>
-            <div class="color-code">#A626D3</div>
-        </div>
-    </section>
-</main>
-<div id="ex"></div>
 
 </html>
