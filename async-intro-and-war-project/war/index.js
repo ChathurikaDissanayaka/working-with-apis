@@ -22,10 +22,10 @@ function drawCards(){
     const url = `https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`
     fetch(url)
     .then(res => res.json())
-        .then(data => {
-            cardsEl.innerHTML = `
+    .then(data => {
+        cardsEl.innerHTML = `
             <img src=${data.cards[0].image}>
             <img src=${data.cards[1].image}>
             `
-        })
+    })
 }

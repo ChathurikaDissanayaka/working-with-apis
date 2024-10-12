@@ -1,11 +1,25 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <button id="new-deck">New Deck, Please!</button>
-        <button id="draw-two-cards" disabled>Draw Two Cards</button>
-        <div id="cards" class="cards"></div>
-        <script src="index.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <button id="new-deck" class="new-deck">New Deck, Please!</button>
+        <div id="cards" class="cards">
+            <div id="card-slot" class="card-slot"></div>
+            <div id="card-slot" class="card-slot"></div>
+        </div>
+        <button id="draw-two-cards" class="new-cards" disabled>Draw Two Cards</button>
+    </main>
+    <script src="index.js"></script>
+</body>
+
 </html>

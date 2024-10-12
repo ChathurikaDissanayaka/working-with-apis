@@ -9,3 +9,49 @@ body {
   margin: 0;
   padding: 0;
 }
+
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(img/table.png);
+  width: 658px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Exo 2", sans-serif;
+}
+
+button {
+  background-color: #fff100;
+  padding: 1em;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+}
+
+.new-deck {
+  align-self: flex-start;
+}
+
+.cards {
+  margin: auto;
+}
+
+.cards img,
+.card-slot {
+  margin: 0.5em;
+  width: 10em;
+  height: 14em;
+}
+
+.cards img {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-slot {
+  border-radius: 5px;
+  border: 2px solid black;
+}
