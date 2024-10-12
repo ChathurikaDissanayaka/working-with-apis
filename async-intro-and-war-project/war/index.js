@@ -2,6 +2,7 @@ let deckId
 
 const newDeckBtn = document.getElementById("new-deck")
 const newCardsBtn = document.getElementById("draw-two-cards")
+const cardsEl = document.getElementById('cards')
 
 newDeckBtn.addEventListener("click", handleClick)
 newCardsBtn.addEventListener("click", drawCards)
@@ -22,6 +23,9 @@ function drawCards(){
     fetch(url)
     .then(res => res.json())
         .then(data => {
-            console.log(data)
+            cardsEl.innerHTML = `
+            <img src=${data.cards[0].image}>
+            <img src=${data.cards[1].image}>
+            `
         })
 }
