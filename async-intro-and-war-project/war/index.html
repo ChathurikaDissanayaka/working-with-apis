@@ -12,11 +12,17 @@
 
 <body>
     <main>
-        <button id="new-deck" class="new-deck">New Deck, Please!</button>
+        <div class="top">
+            <button id="new-deck" class="new-deck">New Deck</button>
+            <p id="remaining-cards"></p>
+        </div>
+        <h2 id="header">Game of War</h2>
+        <p id="computer-score">Computer Score</p>
         <div id="cards" class="cards">
             <div id="card-slot" class="card-slot"></div>
             <div id="card-slot" class="card-slot"></div>
         </div>
+        <p id="user-score">Your Score</p>
         <button id="draw-two-cards" class="new-cards" disabled>Draw Two Cards</button>
     </main>
     <script src="index.js"></script>

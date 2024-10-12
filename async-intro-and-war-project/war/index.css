@@ -15,24 +15,46 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   background-image: url(img/table.png);
   width: 658px;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Exo 2", sans-serif;
+  color: white;
 }
 
 button {
   background-color: #fff100;
-  padding: 1em;
+  padding: 0.5em;
   font-size: 1rem;
   font-weight: bold;
   border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+.top {
+  align-self: flex-start;
+  display: flex;
+}
+
+.top p{
+    padding: 0;
+    margin: 0;
+    align-self: center;
 }
 
 .new-deck {
-  align-self: flex-start;
+  margin-right: 0.5em;
+}
+
+.new-cards {
+  align-self: stretch;
 }
 
 .cards {
@@ -54,4 +76,13 @@ button {
 .card-slot {
   border-radius: 5px;
   border: 2px solid black;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: bold;
 }
