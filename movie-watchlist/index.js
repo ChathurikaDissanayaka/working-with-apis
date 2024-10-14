@@ -17,7 +17,6 @@ form.addEventListener('submit', (e)=>{
     .then(response => response.json())
     .then(data  => {
         movies.push(data)
-        console.log(data)
         
         const {Poster, Title, Runtime, Genre, Plot} = data
 
