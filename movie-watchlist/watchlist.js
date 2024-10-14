@@ -50,7 +50,7 @@ function renderList(){
     } else{
         watchlistEl.innerHTML = `
             <p class="dark-text">Your watchlist is looking a little empty...</p>
-            <p class="content"><a href="index.html"><i class="fa-solid fa-circle-plus"></i></a> Let’s add some movies!</p>`
+            <p class="content"><a href="index.html"><i class="fa-solid fa-circle-plus"></i></a> Let's add some movies!</p>`
     }
 
 }
