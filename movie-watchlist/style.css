@@ -105,6 +105,74 @@ h2 {
   font-size: 0.8rem;
 }
 
+/*  */
+.movie {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5em;
+  border-bottom: 2px solid #2c2c2c;
+}
+
+.movie img {
+  align-self: center;
+  height: 200px;
+  padding-bottom: 0.3em;
+}
+
+.movie p {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0.5em 0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.overview {
+  padding-left: 0.5em;
+  align-self: center;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.mv-title {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  padding-left: 0.3em;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  align-self: flex-start;
+  justify-self: center;
+  padding-top: 0.3em;
+}
+
+.plot {
+  color: #a5a5a5;
+  padding-top: 0.3em;
+}
+
+.movie button:hover {
+  color: rgb(118, 115, 115);
+}
+/*  */
+
 @media (min-width: 500px) {
   h1 {
     font-size: 2.5rem;
@@ -161,5 +229,29 @@ h2 {
 
   h2 {
     font-size: 1.6rem;
+  }
+
+  .movie {
+    flex-direction: row;
+    width: 60%;
+  }
+
+  .movie img {
+    align-self: unset;
+    padding-bottom: 0;
+  }
+
+  .details {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .movie button {
+    align-self: unset;
+    padding-top: 0;
+  }
+
+  .plot {
+    padding-top: 0;
   }
 }
