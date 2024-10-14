@@ -4,6 +4,7 @@ const mainEl = document.getElementById('main')
 
 
 let movies = []
+let statusCode = ''
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
@@ -16,6 +17,7 @@ form.addEventListener('submit', (e)=>{
     .then(response => response.json())
     .then(data  => {
         movies.push(data)
+        console.log(data)
         
         const {Poster, Title, Runtime, Genre, Plot} = data
 
@@ -53,5 +55,8 @@ form.addEventListener('submit', (e)=>{
             <p>Start exploring</p>`
         })
     })
+    .catch(error => {
+        mainEl.innerHTML = `<p>Unable to find what you’re looking for. Please try another search.</p>`
+      });
 })
 
