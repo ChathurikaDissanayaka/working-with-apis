@@ -2,6 +2,9 @@ const form = document.getElementById('form')
 const movieNameEl = document.getElementById('movie-name')
 const mainEl = document.getElementById('main')
 
+
+let movies = []
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
 
@@ -12,6 +15,8 @@ form.addEventListener('submit', (e)=>{
     fetch(url)
     .then(response => response.json())
     .then(data  => {
+        movies.push(data)
+        
         const {Poster, Title, Runtime, Genre, Plot} = data
 
         let rating = ''
@@ -21,7 +26,7 @@ form.addEventListener('submit', (e)=>{
             rating = 'N/A'
         }
         
-        const movie = `
+        mainEl.innerHTML = `
         <div class="movie">
             <img src=${Poster} alt="movie poster">
             <div class="overview">
@@ -38,12 +43,15 @@ form.addEventListener('submit', (e)=>{
             </div>
         </div>`  
 
-        mainEl.innerHTML = movie
-
         const addToWatchlist = document.getElementById('add-to-watchlist')
     
         addToWatchlist.addEventListener('click', ()=>{
-            console.log(movie)
+            localStorage.setItem('movies', JSON.stringify(movies))
+            form.reset()
+            mainEl.innerHTML = `
+            <i class="fa-solid fa-film"></i>
+            <p>Start exploring</p>`
         })
     })
 })
+
