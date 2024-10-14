@@ -3,7 +3,7 @@ const movieNameEl = document.getElementById('movie-name')
 const mainEl = document.getElementById('main')
 
 
-let movies = []
+let movies = JSON.parse(localStorage.getItem('movies'))
 let statusCode = ''
 
 form.addEventListener('submit', (e)=>{
@@ -28,7 +28,7 @@ form.addEventListener('submit', (e)=>{
         }
         
         mainEl.innerHTML = `
-        <div class="movie">
+        <div class="movie space-reset">
             <img src=${Poster} alt="movie poster">
             <div class="overview">
                 <div class="title">
