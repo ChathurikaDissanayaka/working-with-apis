@@ -57,6 +57,6 @@ form.addEventListener('submit', (e)=>{
     })
     .catch(error => {
         mainEl.innerHTML = `<p>Unable to find what you’re looking for. Please try another search.</p>`
-      });
+    })
 })
 
