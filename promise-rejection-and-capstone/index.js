@@ -9,6 +9,11 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         document.body.style.backgroundImage = `url(${url})`
         document.getElementById("author").textContent = 'By: Sean O.'
     })
+
+fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
+	.then(reponse => reponse.json())
+	.then(data => console.log(data))
+	.catch(e => console.log(e))
     
 /**
  * {
