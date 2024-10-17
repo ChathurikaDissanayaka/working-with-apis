@@ -39,3 +39,7 @@ h1.time {
     display: flex;
     align-items: center;
 }
+
+.crypto-top p{
+    margin-left: 10px;
+}
