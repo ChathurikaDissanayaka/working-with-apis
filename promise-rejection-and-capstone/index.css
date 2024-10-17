@@ -40,6 +40,16 @@ h1.time {
     align-items: center;
 }
 
+.crypto-top img{
+    width: 30px;
+    height: auto;
+}
+
 .crypto-top p{
     margin-left: 10px;
+}
+
+.crypto-bottom p{
+    margin: 0;
+    font-size: 1rem;
 }
