@@ -1,4 +1,5 @@
 const cryptoTop = document.getElementById('crypto-top')
+const cryptoBottom = document.getElementById('crypto-bottom')
 
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
     .then(res => res.json())
@@ -25,7 +26,11 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 
 		cryptoTop.innerHTML = `
 			<img src=${data.image.small} alt="">
-            <p>${data.id}</p>
-			`
+            <p>${data.id}</p>`
+
+		cryptoBottom.innerHTML = `
+				<p><i class="fa-solid fa-coins" style="color: #FFD43B;"></i> $${data.market_data.current_price.usd}</p>
+                <p><i class="fa-solid fa-up-long" style="color: #63E6BE;"></i> $${data.market_data.high_24h.usd}</p>
+                <p><i class="fa-solid fa-down-long" style="color: #fb6060;"></i> $${data.market_data.low_24h.usd}</p>`
     })
     .catch(err => console.error(err))
