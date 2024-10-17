@@ -14,7 +14,9 @@ document.addEventListener('click', (e)=>{
 })
 
 function renderList(){
-    movieArray = JSON.parse(localStorage.getItem('movies'))
+    if(JSON.parse(localStorage.getItem('movies'))){
+        movieArray = JSON.parse(localStorage.getItem('movies'))
+    }
 
     if(movieArray.length){
     let htmlStr = ''

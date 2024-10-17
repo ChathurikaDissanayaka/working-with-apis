@@ -3,7 +3,14 @@ const movieNameEl = document.getElementById('movie-name')
 const mainEl = document.getElementById('main')
 
 
-let movies = JSON.parse(localStorage.getItem('movies'))
+let movies = []
+
+if(JSON.parse(localStorage.getItem('movies'))){
+    movies = JSON.parse(localStorage.getItem('movies'))
+}
+
+// localStorage.clear()
+
 let statusCode = ''
 
 form.addEventListener('submit', (e)=>{
@@ -14,7 +21,12 @@ form.addEventListener('submit', (e)=>{
     const url = `http://www.omdbapi.com/?apikey=28ebe08c&t=${movieName}&type=movie`
 
     fetch(url)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw Error("Something went wrong")
+        }
+        return response.json()
+    })
     .then(data  => {
         movies.push(data)
         
@@ -56,6 +68,7 @@ form.addEventListener('submit', (e)=>{
     })
     .catch(error => {
         mainEl.innerHTML = `<p>Unable to find what you're looking for. Please try another search.</p>`
+        console.error(error)
     })
 })
 
