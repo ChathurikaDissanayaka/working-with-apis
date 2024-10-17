@@ -10,10 +10,18 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         document.getElementById("author").textContent = 'By: Sean O.'
     })
 
-fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
-	.then(reponse => reponse.json())
-	.then(data => console.log(data))
-	.catch(e => console.error(e))
+	fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+    .then(res => {
+        if (!res.ok) {
+            throw Error("Something went wrong")
+        }
+        console.log(res.status)
+        return res.json()
+    })
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => console.error(err))
     
 /**
  * {
