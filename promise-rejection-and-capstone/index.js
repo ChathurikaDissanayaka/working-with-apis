@@ -1,6 +1,8 @@
 const cryptoTop = document.getElementById('crypto-top')
 const cryptoBottom = document.getElementById('crypto-bottom')
+const timeEl = document.getElementById('time')
 
+// Display background image
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
     .then(res => res.json())
     .then(data => {
@@ -13,7 +15,8 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         document.getElementById("author").textContent = 'By: Sean O.'
     })
 
-	fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+// Display crypto data
+fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     .then(res => {
         if (!res.ok) {
             throw Error("Something went wrong")
@@ -34,3 +37,7 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
                 <p><i class="fa-solid fa-down-long" style="color: #fb6060;"></i> $${data.market_data.low_24h.usd}</p>`
     })
     .catch(err => console.error(err))
+
+// Display time
+const date = new Date()
+timeEl.innerText = date.toLocaleTimeString("en-us", {timeStyle: "short"})
