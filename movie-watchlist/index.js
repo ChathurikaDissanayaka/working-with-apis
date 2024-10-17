@@ -18,7 +18,7 @@ form.addEventListener('submit', (e)=>{
 
     const movieName = movieNameEl.value
 
-    const url = `http://www.omdbapi.com/?apikey=28ebe08c&t=${movieName}&type=movie`
+    const url = `https://www.omdbapi.com/?apikey=28ebe08c&t=${movieName}&type=movie`
 
     fetch(url)
     .then(response => {
