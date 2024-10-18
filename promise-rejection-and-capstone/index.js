@@ -18,8 +18,8 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         const url = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyMTEwMjl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjI2NzA5Mzg&ixlib=rb-1.2.1&q=85'
         document.body.style.backgroundImage = `url(${url})`
         document.getElementById("author").textContent = 'By: Sean O.'
+        console.error(err)
     })
-    .catch(err => console.error(err))
 
 // Display crypto data
 fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
