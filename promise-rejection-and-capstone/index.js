@@ -4,7 +4,12 @@ const timeEl = document.getElementById('time')
 
 // Display background image
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
-    .then(res => res.json())
+    .then(res => {
+        if(!res.ok){
+            throw Error("Something went wrong")
+        }
+        return res.json()
+    })
     .then(data => {
         document.body.style.backgroundImage = `url(${data.urls.full})`
 		document.getElementById("author").textContent = `By: ${data.user.name}`
@@ -14,6 +19,7 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         document.body.style.backgroundImage = `url(${url})`
         document.getElementById("author").textContent = 'By: Sean O.'
     })
+    .catch(err => console.error(err))
 
 // Display crypto data
 fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
@@ -21,7 +27,6 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
         if (!res.ok) {
             throw Error("Something went wrong")
         }
-        console.log(res.status)
         return res.json()
     })
     .then(data => {
