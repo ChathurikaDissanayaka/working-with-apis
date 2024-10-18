@@ -25,13 +25,11 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     .then(res => {
         if (!res.ok) {
-            throw Error("Something went wrong")
+            throw Error("Crypto data not available")
         }
         return res.json()
     })
     .then(data => {
-        console.log(data)
-
 		cryptoTop.innerHTML = `
 			<img src=${data.image.small} alt="">
             <p>${data.id}</p>`
@@ -48,3 +46,16 @@ setInterval(() => {
     const date = new Date()
     timeEl.innerText = date.toLocaleTimeString("en-us", {timeStyle: "short"})
 }, 1000);
+
+// Display weather data
+navigator.geolocation.getCurrentPosition((position) => {
+    fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`)
+        .then(res => {
+            if(!res.ok){
+                throw Error("Weather data not available")
+            }
+            return res.json()
+        })
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+})
