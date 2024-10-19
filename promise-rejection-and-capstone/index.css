@@ -24,14 +24,14 @@ main {
   justify-content: space-between;
 }
 
-div.top {
+.top {
   display: flex;
   justify-content: space-between;
 }
 
-h1.time {
+.time {
   text-align: center;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .crypto {
