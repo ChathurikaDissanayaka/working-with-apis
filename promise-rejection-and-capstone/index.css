@@ -1,56 +1,63 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}   
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    background: no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0px 0px 20px #aaaaaa;
+  margin: 0;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 0px 20px #aaaaaa;
 }
 
 main {
-    padding: 15px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 div.top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1.time {
-    text-align: center;
-    font-size: 3rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .crypto {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .crypto-top {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.crypto-top img{
-    width: 30px;
-    height: auto;
+.crypto-top img {
+  width: 30px;
+  height: auto;
 }
 
-.crypto-top p{
-    margin-left: 10px;
+.crypto-top p {
+  margin-left: 10px;
 }
 
-.crypto-bottom p{
-    margin: 0;
-    font-size: 1rem;
+.crypto-bottom p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.weather-top {
+  display: flex;
+  align-items: center;
 }
