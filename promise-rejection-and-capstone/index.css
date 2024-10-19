@@ -57,7 +57,27 @@ h1.time {
   font-size: 1rem;
 }
 
-.weather-top {
+.weather {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-self: flex-start;
+}
+
+.weather-icon {
+  width: 70px;
+}
+
+.temp {
+  margin: 0;
+  font-size: 1.7rem;
+  margin-left: -10px;
+}
+
+.city {
+  width: 100%;
+  text-align: right;
+  margin: 0;
+  margin-top: -10px;
 }
